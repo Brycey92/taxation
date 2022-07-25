@@ -15,7 +15,7 @@ import de.randombyte.taxation.commands.SessionInfoCommand
 import de.randombyte.taxation.config.ConfigAccessor
 import de.randombyte.taxation.config.PersistenceDatabase
 import org.apache.commons.lang3.RandomUtils
-import org.bstats.sponge.Metrics2
+import org.bstats.sponge.Metrics
 import org.slf4j.Logger
 import org.spongepowered.api.Sponge
 import org.spongepowered.api.command.CommandResult
@@ -52,7 +52,7 @@ import java.util.concurrent.TimeUnit
 class Taxation @Inject constructor(
         val logger: Logger,
         @ConfigDir(sharedRoot = false) configPath: Path,
-        private val metrics: Metrics2
+        private val metrics: Metrics
 ) {
     companion object {
         const val ID = "taxation"
